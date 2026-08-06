@@ -1,5 +1,5 @@
 # 🚀 Java Full-Stack Spring Development
-> **Java 풀스택 개발자 양성 과정 (Step 04)** > SpringFrameWork부터 Spring-BootR까지, 웹 개발의 전 과정을 학습하고 기록하는 저장소입니다.
+> **Java 풀스택 개발자 양성 과정 (Step 05)** >  Spring-Boot 웹 개발의 전 과정을 학습하고 기록하는 저장소
 
 ## 📅 학습 타임라인
 | 날짜 | 주요 주제 | 요약 | 상세 내용 |
