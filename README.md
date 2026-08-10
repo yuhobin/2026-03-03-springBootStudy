@@ -24,19 +24,27 @@
 ## 🛠️ 주요 사용 기술
 
 ### 🌐 Frontend
-- **Languages:** HTML5, CSS3, JavaScript (ES6+)
-- **Tools:** VS Code (학습 예정)
+- **Languages & Frameworks:** HTML5, CSS3, JavaScript (ES6+), Vue 3 (Vuex, Pinia), jQuery
+- **Template Engine:** Thymeleaf
+- **Tools:** VS Code 
 
 ### ⚙️ Backend & Server
 - **Language:** Java (JDK 21)
-- **Server:** Apache Tomcat 11.0.20
+- **Framework:** Spring Boot (Embedded Apache Tomcat 11.0.20)
+- **ORM & Mapper:** Spring Data JPA, MyBatis
+- **Build Tool:** Gradle
 - **IDE:** Eclipse IDE (Main Environment)
-- **Libraries:** Servlet API, MyBatis 3.5.17, Lombok, Slf4j
+- **Libraries:** Lombok, Slf4j
 
 ### 💾 Database & Connectivity
 - **DB:** Oracle Database 21c Express Edition (XE)
 - **Tools:** SQL Developer, DBeaver
-- **Connectivity:** JDBC (ojdbc8)
+- **Connectivity:** JDBC (ojdbc11)
+
+### ☁️ Infrastructure & DevOps
+- **OS:** Ubuntu 26.04
+- **Cloud:** AWS
+- **Container:** Docker
 
 ### 🚀 VCS
 - **Git / GitHub**
