@@ -14,7 +14,7 @@
 | 26.08.12 | JPA - JPQL, QueryDSL | JPA 쿼리 방식 비교 - JPQL, QueryDSL | [보러가기](./doc/2026-08-12.md ) |
 | 26.08.13 |  Pinia 활용부터 배포까지 | Pinia를 활용해 맛집목록 및 검색을 만들고 GitActions와 Docker, Ubuntu를 이용해 배포 진행 | [보러가기](./doc/2026-08-13.md ) |
 | 26.08.14 | 람다식 활용 | security 코드 작성을 위한 람다식 복습 | [보러가기](./doc/2026-08-14.md ) |
-| 26.08.18 | Spring-Security | 람다식을 활용하여 security 코드 작성 | [보러가기](./doc/2026-08-18.md ) |
+| 26.08.18 | Spring-Security | (spring-security -> SpringPiniaProject2참고)람다식을 활용하여 security 코드 작성 | [보러가기](./doc/2026-08-18.md ) |
 | 26.08.19 |  |  | [보러가기](./doc/2026-08-19.md ) |
 | 26.08.20 |  |  | [보러가기](./doc/2026-08-20.md ) |
 | 26.08.21 |  |  | [보러가기](./doc/2026-08-21.md ) |
