@@ -1,0 +1,9 @@
+spring:
+  ai:
+    google:
+      genai:
+        api-key: ${GEN_KEY}
+        project-id: gen-lang-client-0122754073
+        location: us-central1
+        chat:
+          model: gemini-3.6-flash
