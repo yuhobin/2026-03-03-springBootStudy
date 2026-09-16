@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sist.web.mapper.oracle.OracleEduMapper">
+  <select id="courseAllData" resultType="com.sist.web.vo.CourseVO">
+    SELECT * FROM course
+    ORDER BY no ASC
+    OFFSET 200 ROWS FETCH NEXT 200 ROWS ONLY
+  </select>
+  <!-- 
+        id BIGSERIAL PRIMARY KEY,
+	    question_no BIGINT NOT NULL, 
+	    course_no BIGINT,
+	    title VARCHAR(4000) NOT NULL,
+	    description TEXT,
+	    theme INTEGER,
+	    type INTEGER,
+	    difficulty INTEGER NOT NULL,
+	    answer VARCHAR(2000) NOT NULL,
+	    option1 VARCHAR(2000),
+	    option2 VARCHAR(2000),
+	    option3 VARCHAR(2000),
+	    option4 VARCHAR(2000),
+	    content TEXT,
+	    embedding VECTOR(768)
+	    
+	    NO          NOT NULL NUMBER         
+		QUESTION_NO NOT NULL NUMBER         
+		OPTION1              VARCHAR2(2000) 
+		OPTION2              VARCHAR2(2000) 
+		OPTION3              VARCHAR2(2000) 
+		OPTION4              VARCHAR2(2000)
+		
+		NO            NOT NULL NUMBER         
+		TITLE         NOT NULL VARCHAR2(1000) 
+		INSTRUCTOR_NO NOT NULL NUMBER         
+		STAR                   NUMBER(3,1)    
+		STUDENT_COUNT          NUMBER         
+		PAY_PRICE              NUMBER         
+		REGULAR_PRICE          NUMBER         
+		CONTENT                CLOB           
+		IMAGES                 CLOB           
+		THUMBNAIL              VARCHAR2(1000) 
+		
+		NO          NOT NULL NUMBER  
+		       
+		TITLE                VARCHAR2(4000) 
+		IMAGE                VARCHAR2(2000) 
+		ANSWER               VARCHAR2(2000) 
+		SCORE       NOT NULL NUMBER         
+		DESCRIPTION          CLOB           
+		THEME                NUMBER         
+		TYPE                 NUMBER         
+		DIFFICULTY           NUMBER(1) 
+   -->
+  <resultMap type="com.sist.web.vo.QuestionVO" id="questionMap">
+    <result property="evo.option1" column="option1"/>
+    <!-- 
+          ExamOption evo=new ExamOption()
+          evo.setOption1()
+     -->
+    <result property="evo.option2" column="option2"/>
+    <result property="evo.option3" column="option3"/>
+    <result property="evo.option4" column="option4"/>
+  </resultMap>
+  <select id="questionAllData" resultMap="questionMap">
+    SELECT q.no,q.title,q.answer,q.score,q.description,q.theme,q.type,
+           q.difficulty,
+           o.option1,o.option2,o.option3,o.option4
+    FROM exam_question q
+    LEFT JOIN exam_option o
+    ON q.no=o.question_no
+    ORDER BY q.no ASC
+    OFFSET 0 ROWS FETCH NEXT 200 ROWS ONLY
+  </select>
+</mapper>
