@@ -1,0 +1,26 @@
+server:
+  servlet:
+    context-path: /
+
+spring:
+  # 데이터베이스 설정 (다중 DB 바인딩용 커스텀 프로퍼티)
+  datasource:
+      url: jdbc:mysql://localhost:3306/mydb?autoReconnect=true
+      username: root
+      password: happy
+      driver-class-name: com.mysql.cj.jdbc.Driver 
+
+  thymeleaf:
+    cache: false
+    encoding: UTF-8
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
+
+# MyBatis 설정
+mybatis:
+  type-aliases-package: com.sist.web.vo
+  mapper-locations: 
+    - classpath:/mapper/mysql/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
